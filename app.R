@@ -1,5 +1,6 @@
 library(shiny)
 library(httr)
+library(jsonlite)
 
 ui <- fluidPage(
   fluidRow(
@@ -62,7 +63,7 @@ server <- function(input, output, session) {
   
   observeEvent(input$submit_btn, {
     # token(input$token_input)
-    token("TOKEN-ICI")
+    token("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")
     
     api_url <- "https://api.openai.com/v1/chat/completions"
     input_text <- input$input_text
